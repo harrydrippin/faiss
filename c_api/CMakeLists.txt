@@ -16,6 +16,7 @@ set(FAISS_C_SRC
   IndexIVFFlat_c.cpp
   IndexIVF_c.cpp
   IndexLSH_c.cpp
+  IndexHNSW_c.cpp
   IndexPreTransform_c.cpp
   VectorTransform_c.cpp
   IndexShards_c.cpp

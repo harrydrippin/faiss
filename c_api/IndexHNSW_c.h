@@ -29,13 +29,15 @@ FAISS_DECLARE_INDEX_DOWNCAST(IndexHNSWPQ)
 int faiss_IndexHNSW_new(FaissIndexHNSW** p_index);
 int faiss_IndexHNSW_new_with_options(FaissIndexHNSW** p_index, int d, int M, FaissMetricType metric);
 
+int faiss_IndexHNSWPQ_new(FaissIndexHNSWPQ** p_index);
+int faiss_IndexHNSWPQ_new_with_options(FaissIndexHNSWPQ** p_index, int d, int pq_m, int M);
+
 // Adding HNSW's properties for bypassing HNSW's type implementation
 void faiss_IndexHNSW_set_efSearch(FaissIndexHNSW* p_index, int efSearch);
 void faiss_IndexHNSW_set_efConstruction(FaissIndexHNSW* p_index, int efConstruction);
 
-int faiss_IndexHNSWPQ_new(FaissIndexHNSWPQ** p_index);
-int faiss_IndexHNSWPQ_new_with_options(FaissIndexHNSWPQ** p_index, int d, int pq_m, int M);
-
+void faiss_IndexHNSWPQ_set_efSearch(FaissIndexHNSW* p_index, int efSearch);
+void faiss_IndexHNSWPQ_set_efConstruction(FaissIndexHNSW* p_index, int efConstruction);
 
 #ifdef __cplusplus
 }

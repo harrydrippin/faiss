@@ -40,14 +40,6 @@ int faiss_IndexHNSW_new_with_options(FaissIndexHNSW** p_index, int d, int M, Fai
     CATCH_AND_HANDLE
 }
 
-void faiss_IndexHNSW_set_efSearch(FaissIndexHNSW* p_index, int efSearch) {
-    reinterpret_cast<IndexHNSW*>(p_index)->hnsw.efSearch = efSearch;
-}
-
-void faiss_IndexHNSW_set_efConstruction(FaissIndexHNSW* p_index, int efConstruction) {
-    reinterpret_cast<IndexHNSW*>(p_index)->hnsw.efConstruction = efConstruction;
-}
-
 int faiss_IndexHNSWPQ_new(FaissIndexHNSWPQ** p_index) {
     try {
         *p_index = reinterpret_cast<FaissIndexHNSWPQ*>(new IndexHNSWPQ());
@@ -62,4 +54,20 @@ int faiss_IndexHNSWPQ_new_with_options(FaissIndexHNSWPQ** p_index, int d, int pq
         ));
     }
     CATCH_AND_HANDLE
+}
+
+void faiss_IndexHNSW_set_efSearch(FaissIndexHNSW* p_index, int efSearch) {
+    reinterpret_cast<IndexHNSW*>(p_index)->hnsw.efSearch = efSearch;
+}
+
+void faiss_IndexHNSW_set_efConstruction(FaissIndexHNSW* p_index, int efConstruction) {
+    reinterpret_cast<IndexHNSW*>(p_index)->hnsw.efConstruction = efConstruction;
+}
+
+void faiss_IndexHNSWPQ_set_efSearch(FaissIndexHNSWPQ* p_index, int efSearch) {
+    reinterpret_cast<IndexHNSWPQ*>(p_index)->hnsw.efSearch = efSearch;
+}
+
+void faiss_IndexHNSWPQ_set_efConstruction(FaissIndexHNSWPQ* p_index, int efConstruction) {
+    reinterpret_cast<IndexHNSWPQ*>(p_index)->hnsw.efConstruction = efConstruction;
 }

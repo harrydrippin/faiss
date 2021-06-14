@@ -36,8 +36,8 @@ int faiss_IndexHNSWPQ_new_with_options(FaissIndexHNSWPQ** p_index, int d, int pq
 void faiss_IndexHNSW_set_efSearch(FaissIndexHNSW* p_index, int efSearch);
 void faiss_IndexHNSW_set_efConstruction(FaissIndexHNSW* p_index, int efConstruction);
 
-void faiss_IndexHNSWPQ_set_efSearch(FaissIndexHNSW* p_index, int efSearch);
-void faiss_IndexHNSWPQ_set_efConstruction(FaissIndexHNSW* p_index, int efConstruction);
+void faiss_IndexHNSWPQ_set_efSearch(FaissIndexHNSWPQ* p_index, int efSearch);
+void faiss_IndexHNSWPQ_set_efConstruction(FaissIndexHNSWPQ* p_index, int efConstruction);
 
 #ifdef __cplusplus
 }
